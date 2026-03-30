@@ -26,6 +26,7 @@ It helps a user store, search, and manage website credentials in one place.
 - File handling: BufferedReader, BufferedWriter
 
 ## Project Structure
+```
 SecureVault/
 |- src/
 |  |- VaultApp.java
@@ -40,6 +41,7 @@ SecureVault/
 |- run.ps1
 |- run-demo.ps1
 |- README.md
+```
 
 ## Prerequisites
 - Windows PowerShell
@@ -66,13 +68,6 @@ javac -d out src/*.java
 java -cp out VaultApp
 ```
 
-If PATH is not set, use full executable paths:
-
-```powershell
-"C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin\javac.exe" -d out src/*.java
-"C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin\java.exe" -cp out VaultApp
-```
-
 ## How to Use
 1. Start the app.
 2. Enter a master password.
@@ -86,15 +81,12 @@ If PATH is not set, use full executable paths:
    - 5: View password for website
    - 6: Save and exit
 
-## Important Note About Auto Exit
-Do not use piped demo input for normal usage.
-Example of demo-only command:
+## Master Password
+Do not share Master password with anyone.
 
 ```powershell
-"Master123`n5" | java -cp out VaultApp
+Master123
 ```
-
-That pattern can auto-select options and exit quickly.
 
 ## Data File
 - Vault data is stored in data/vault.dat
